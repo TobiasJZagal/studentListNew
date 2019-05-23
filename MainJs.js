@@ -62,12 +62,18 @@ function prepareObjects(jsonData) {
     students.firstName = parts[0];
     students.lastName = parts[1];
     students.house = jsonObject.house;
-    firstLetter = getFirstLetter(parts[0]);
-    students.image = `images/${students.lastName}_${firstLetter}.png`;
+    firstLetterLastName = getFirstLetter(parts[0]);
+    LastNameLowerCase = toLowerCaseFunc(parts[1]);
+    students.image = `images/${LastNameLowerCase}_${firstLetterLastName}.png`;
 
     allStudents.push(students);
   });
   allStudents.forEach(displayList);
+}
+
+function toLowerCaseFunc(Name) {
+  let lowerCaseName = Name.toLowerCase();
+  return lowerCaseName;
 }
 
 function getFirstLetter(Name) {
