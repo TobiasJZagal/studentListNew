@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Hogwards hacked</title>
+  </head>
+  <body>
+    <style>
+      .dropwm {
+        background-color: #eca841;
+        color: white;
+        padding: 15px;
+        font-size: 14px;
+        border: none;
+      }
+
+      .dropmenu {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        z-index: 1;
+      }
+
+      .dropdown-content button {
+        display: block;
+        margin: 1em;
+        text-align: center;
+      }
+
+      .dropdown-content:hover {
+        display: block;
+        position: absolute;
+      }
+      .dropmenu:hover .dropdown-content {
+        display: block;
+      }
+      /*  */
+    </style>
+
+    <h1>Hogwards student list</h1>
+
+    <div class="dropmenu">
+      <button class="dropwm">chance filter</button>
+      <div class="dropdown-content">
+        <button class="chanceFilter" data-type="alle">Alle</button>
+        <button class="chanceFilter" data-type="Gryffindor">Gryffindor</button>
+        <button class="chanceFilter" data-type="Hufflepuff">Hufflepuff</button>
+        <button class="chanceFilter" data-type="Ravenclaw">Ravenclaw</button>
+        <button class="chanceFilter" data-type="Slytherin">Slytherin</button>
+      </div>
+    </div>
+
+    <div class="dropmenu">
+      <button class="dropwm">Sort by</button>
+      <div class="dropdown-content">
+        <button class="firstName">First name</button>
+        <button class="lastName">Last Name</button>
+        <button class="house">House</button>
+      </div>
+    </div>
+
+    <div id="container"></div>
+    <template id="template">
+      <article>
+        <h1 id="studentName">student name</h1>
+        <p id="studentHouse">student house</p>
+        <img id="studentImage" src="" />
+      </article>
+    </template>
+    <script src="MainJs.js"></script>
+  </body>
+</html>
